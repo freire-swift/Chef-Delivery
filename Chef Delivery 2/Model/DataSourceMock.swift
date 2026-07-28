@@ -8,7 +8,7 @@
 import Foundation
 
 let ordersMock: [OrderType] = [
-    OrderType(id: 1, name: "Restaurantes", image: "hamburger"),
+    OrderType(id: 1, name: "Restaurantes", image: "hamburguer"),
     OrderType(id: 2, name: "Fármacia", image: "farmacia"),
     OrderType(id: 3, name: "Descontos", image: "descontos"),
     OrderType(id: 4, name: "Gourmet", image: "gourmet"),

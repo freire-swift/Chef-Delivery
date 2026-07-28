@@ -29,9 +29,7 @@ struct NavigationBar: View {
                 }
 
             }
-            .padding()
             
-            Spacer()
         }
     }
 }
