@@ -14,8 +14,10 @@ struct ContentView: View {
                 .padding(.horizontal, 15)
             
             ScrollView(.vertical) {
-                VStack{
+                VStack(spacing: 20){
                     OrderTypeGridView()
+                    CarouselTabView()
+                    StoresContainerView()
                 }
             }
             
