@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EBD70DEB302FCA24006ADF96 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD70DEA302FCA24006ADF96 /* Double+.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		EB2BE5482FFBAF8800F2838B /* Chef Delivery 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chef Delivery 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD70DEA302FCA24006ADF96 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		EB2BE53F2FFBAF8800F2838B = {
 			isa = PBXGroup;
 			children = (
+				EBD70DE9302FC9FE006ADF96 /* Extension */,
 				EB2BE54A2FFBAF8800F2838B /* Chef Delivery 2 */,
 				EB2BE5492FFBAF8800F2838B /* Products */,
 			);
@@ -43,6 +49,14 @@
 				EB2BE5482FFBAF8800F2838B /* Chef Delivery 2.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EBD70DE9302FC9FE006ADF96 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EBD70DEA302FCA24006ADF96 /* Double+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBD70DEB302FCA24006ADF96 /* Double+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
