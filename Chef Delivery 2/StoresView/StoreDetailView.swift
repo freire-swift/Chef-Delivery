@@ -11,6 +11,7 @@ struct StoreDetailView: View {
     
     let store: StoreType
     @Environment(\.dismiss) private var dismiss
+    @State private var selectedProduct: ProductType?
     
     var body: some View {
         ScrollView(){
@@ -46,23 +47,34 @@ struct StoreDetailView: View {
                     .padding()
                 
                 ForEach(store.products){ product in
-                    HStack(spacing: 8){
-                        VStack(alignment: .leading,spacing: 8){
-                            Text(product.name)
-                                .fontWeight(.bold)
-                            Text(product.description)
-                                .foregroundStyle(.black.opacity(0.5))
-                            Text(product.formattedPrice)
+                    Button {
+                        selectedProduct = product
+                    } label: {
+                        HStack(spacing: 8){
+                            VStack(alignment: .leading,spacing: 8){
+                                Text(product.name)
+                                    .fontWeight(.bold)
+                                Text(product.description)
+                                    .foregroundStyle(.black.opacity(0.5))
+                                    .multilineTextAlignment(.leading)
+                                Text(product.formattedPrice)
+                            }
+                            Spacer()
+                            Image(product.image)
+                                .resizable()
+                                .scaledToFit()
+                                .clipShape(.rect(cornerRadius: 12, style: .continuous))
+                                .frame(width: 120, height: 120)
+                                .shadow(color: .black.opacity(0.3), radius: 20, x: 8, y: 6)
                         }
-                        Spacer()
-                        Image(product.image)
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(.rect(cornerRadius: 12, style: .continuous))
-                            .frame(width: 120, height: 120)
-                            .shadow(color: .black.opacity(0.3), radius: 20, x: 8, y: 6)
+                        .padding()
+                        .foregroundStyle(.black)
                     }
-                    .padding()
+                    .sheet(item: $selectedProduct) { product in
+                        ProdutDetailView(product: product)
+                    }
+
+                    
                 }
             }
         }
